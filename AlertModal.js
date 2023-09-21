@@ -30,33 +30,33 @@ const AlertModal = ({
 
     }, [modalVisible])
 
-    let rotateValueHolder = new Animated.Value(0);
+    // let rotateValueHolder = new Animated.Value(0);
 
-    const startImageRotateFunction = () => {
-        rotateValueHolder.setValue(0);
-        Animated.timing(rotateValueHolder, {
-            toValue: 1,
-            duration: 3000,
-            easing: Easing.sin,
-            useNativeDriver: false,
+    // const startImageRotateFunction = () => {
+    //     rotateValueHolder.setValue(0);
+    //     Animated.timing(rotateValueHolder, {
+    //         toValue: 1,
+    //         duration: 3000,
+    //         easing: Easing.sin,
+    //         useNativeDriver: false,
 
 
-        }).start(() => startImageRotateFunction());
-    };
+    //     }).start(() => startImageRotateFunction());
+    // };
 
-    const rotateData = rotateValueHolder.interpolate({
-        inputRange: [0, 1],
-        outputRange: ['360deg', '0deg'],
-    });
+    // const rotateData = rotateValueHolder.interpolate({
+    //     inputRange: [0, 1],
+    //     outputRange: ['360deg', '0deg'],
+    // });
 
-    const rotateData1 = rotateValueHolder.interpolate({
-        inputRange: [0, 1],
-        outputRange: ['0deg', '180deg'],
-    });
-    const rotateData2 = rotateValueHolder.interpolate({
-        inputRange: [0, 1],
-        outputRange: ['180deg', '0deg',],
-    });
+    // const rotateData1 = rotateValueHolder.interpolate({
+    //     inputRange: [0, 1],
+    //     outputRange: ['0deg', '180deg'],
+    // });
+    // const rotateData2 = rotateValueHolder.interpolate({
+    //     inputRange: [0, 1],
+    //     outputRange: ['180deg', '0deg',],
+    // });
 
 
 
@@ -75,11 +75,11 @@ const AlertModal = ({
                     </Animated.View>
                     <Animated.View style={{ height: 80, width: 80, borderRadius: 100, borderWidth: 1, alignSelf: "center", marginTop: 10, borderColor: !stripeModal ? color.AppColor : "#facea8", alignItems: "center", justifyContent: "center" }}>
                         <Animated.View style={{ transform: [{ rotateY: rotateData }] }}>
-                            {
-                                !stripeModal ?
-                                    <MaterialCommunityIcons name='help' size={30} color={Colores ? color.AppColor : color.green} /> :
-                                    <MaterialCommunityIcons name='exclamation' size={30} color={"#facea8"} />
-                            }
+                            // {
+                            //     !stripeModal ?
+                            //         <MaterialCommunityIcons name='help' size={30} color={Colores ? color.AppColor : color.green} /> :
+                            //         <MaterialCommunityIcons name='exclamation' size={30} color={"#facea8"} />
+                            // }
                         </Animated.View>
                     </Animated.View>
                     {
